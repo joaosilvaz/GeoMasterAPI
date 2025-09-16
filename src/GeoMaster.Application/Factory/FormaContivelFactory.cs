@@ -11,7 +11,7 @@ namespace GeoMaster.Application.Factory
         {
             _map = new Dictionary<string, Func<IReadOnlyDictionary<string, double>, IFormaContivel>>(StringComparer.OrdinalIgnoreCase)
             {
-                // ajuste os types abaixo para as SUAS classes que implementam IFormaContivel
+               
                 ["circulo"] = p => new CirculoContivel(Req(p, "raio")),
                 ["retangulo"] = p => new RetanguloContivel(Req(p, "largura"), Req(p, "altura"))
             };
