@@ -1,8 +1,9 @@
 ﻿using GeoMaster.Domain.Abstractions;
 
-namespace GeoMaster.Application.Abstractions;
-
-public interface IValidacoesService
+namespace GeoMaster.Application.Abstractions
 {
-    bool ValidarFormaContida(IFormaContivel formaExterna, IFormaContivel formaInterna);
+    public interface IValidacoesService
+    {
+        bool ValidarFormaContida(IFormaContivel formaExterna, IFormaContivel formaInterna);
+    }
 }
