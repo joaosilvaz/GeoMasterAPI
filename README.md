@@ -13,46 +13,44 @@
 
 ## Estrutura do Projeto
 
-## Estrutura do Projeto
-
-GeoMaster.sln
-└─ src/
-   ├─ GeoMaster.Api/               # Interface HTTP (Controllers, Program/Swagger)
-   │  └─ Controllers/
-   │     ├─ CalculosController.cs
-   │     ├─ ValidacoesController.cs
-   │     └─ BaseCalculosController.cs
-   │  └─ Program.cs
-   │
-   ├─ GeoMaster.Application/       # Casos de uso / Serviços e Fábricas (DI)
-   │  └─ Abstractions/
-   │     ├─ ICalculadoraService.cs
-   │     └─ IValidacoesService.cs
-   │  └─ Services/
-   │     ├─ CalculadoraService.cs
-   │     └─ ValidacoesService.cs
-   │  └─ Factory/
-   │        ├─ IFormaFactory.cs
-   │        ├─ FormaFactory.cs
-   │        ├─ IFormaContivelFactory.cs
-   │        └─ FormaContivelFactory.cs
-   │
-   └─ GeoMaster.Domain/            # Regras de negócio (Formas, DTOs, Abstrações)
-      └─ Abstractions/
-      │     ├─ ICalculos2D.cs
-      │     ├─ ICalculos3D.cs
-      │     ├─ IFormaContivel.cs   // exige bool Contem(IFormaContivel)
-      │     ├─ FormaCircular.cs    // base p/ raio
-      │     └─ FormaRetangular.cs  // base p/ largura/altura
-      └─ Shapes/
-      │     ├─ Circulo.cs          // ICalculos2D, IFormaContivel
-      │     ├─ Retangulo.cs        // ICalculos2D, IFormaContivel
-      │     └─ Esfera.cs           // ICalculos3D
-      └─ Dtos/
-            ├─ FormaRequestDto.cs          // { tipoForma, propriedades }
-            ├─ ResultadoCalculoDto.cs      // From(tipo, resultado, TipoOperacao)
-            ├─ FormaSimplesDto.cs          // usado em validações
-            └─ FormaContidaRequestDto.cs   // { formaExterna, formaInterna }
+      GeoMaster.sln
+      └─ src/
+      ├─ GeoMaster.Api/ 
+      │  └─ Controllers/
+         │     ├─ CalculosController.cs
+         │     ├─ ValidacoesController.cs
+         │     └─ BaseCalculosController.cs
+      │  └─ Program.cs
+      │
+      ├─ GeoMaster.Application/      
+         │  └─ Abstractions/
+      │     ├─ ICalculadoraService.cs
+      │     └─ IValidacoesService.cs
+      │  └─ Services/
+      │     ├─ CalculadoraService.cs
+      │     └─ ValidacoesService.cs
+      │  └─ Factory/
+      │        ├─ IFormaFactory.cs
+      │        ├─ FormaFactory.cs
+      │        ├─ IFormaContivelFactory.cs
+      │        └─ FormaContivelFactory.cs
+      │
+      └─ GeoMaster.Domain/            # Regras de negócio (Formas, DTOs, Abstrações)
+         └─ Abstractions/
+         │     ├─ ICalculos2D.cs
+         │     ├─ ICalculos3D.cs
+         │     ├─ IFormaContivel.cs   # exige bool Contem(IFormaContivel)
+         │     ├─ FormaCircular.cs    # base p/ raio
+         │     └─ FormaRetangular.cs  # base p/ largura/altura
+         └─ Shapes/
+         │     ├─ Circulo.cs          # ICalculos2D, IFormaContivel
+         │     ├─ Retangulo.cs        # ICalculos2D, IFormaContivel
+         │     └─ Esfera.cs           # ICalculos3D
+         └─ Dtos/
+               ├─ FormaRequestDto.cs          # { tipoForma, propriedades }
+               ├─ ResultadoCalculoDto.cs      # From(tipo, resultado, TipoOperacao)
+               ├─ FormaSimplesDto.cs          # usado em validações
+               └─ FormaContidaRequestDto.cs   # { formaExterna, formaInterna }
 
 ---
 
