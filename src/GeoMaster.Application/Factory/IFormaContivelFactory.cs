@@ -1,10 +1,9 @@
-﻿using System.Text.Json;
-using GeoMaster.Domain.Abstractions;
+﻿using GeoMaster.Domain.Abstractions;
 
-namespace GeoMaster.Application.Factory;
-
-public interface IFormaContivelFactory
+namespace GeoMaster.Application.Factory
 {
-    IFormaContivel CriarFormaContivel(string? tipo, IReadOnlyDictionary<string, double>? props);
-    IFormaContivel CriarFormaContivel(string tipo, JsonElement propriedades);
+    public interface IFormaContivelFactory
+    {
+        IFormaContivel CriarFormaContivel(string? tipo, IReadOnlyDictionary<string, double>? props);
+    }
 }

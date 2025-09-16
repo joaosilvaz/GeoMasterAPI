@@ -10,7 +10,6 @@ namespace GeoMaster.Application.Factory
     public interface IFormaFactory
     {
         object CriarForma(string? tipo, IReadOnlyDictionary<string, double>? props);
-        object CriarForma(string tipo, JsonElement propriedades);
         bool SuportaTipo(string tipo);
     }
 }
