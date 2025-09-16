@@ -179,5 +179,6 @@ Acesse a documentação Swagger para testar os endpoints:
 http://localhost:{porta}/swagger
 
 ## 👨‍💻 Autor
-João Vitor da Silva Nascimento 
+João Vitor da Silva Nascimento RM554694 
+
 FIAP 
